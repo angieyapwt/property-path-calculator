@@ -3,14 +3,14 @@
 import { useMemo, useState } from 'react';
 import { ArrowRight, Check, Home, Info, Sparkles, X } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Switch } from '@/components/ui/switch';
 
 type Path='hdb'|'condo'|'upgrade';
 type Values=Record<string,number>;
 type Row={label:string;value:number;emphasis?:boolean};
 type Result={title:string;total:number;status:string;rows:Row[];health:{title:string;text:string}[]};
 const GST=.09,WHATSAPP='6583963088';
-const endpoints:Record<Path,string>={hdb:'https://script.google.com/macros/s/AKfycbwfJ-p_WtksPVa5CyTKxOYiephFtS5GNIj5x9A2kxGAxZubncKW8_WaQi6IrHyJm2AW/exec',upgrade:'https://script.google.com/macros/s/AKfycbyGFLMQqS42t-ZGHyhnYBgYv3kILp9IhY903xXVbSEH3vv_SIaEmX9o-aohJ_nynu-ncA/exec',condo:'https://script.google.com/macros/s/AKfycbzKQK18-FTOyS7u0e-XN4_hEtEbaxemlw6PWOenvCpsCBovOm9799K7kAjbSu8kAtZUtA/exec'};
+const LEAD_ENDPOINT='https://script.google.com/macros/s/AKfycbzw-ii6d4hBwS-IP7UgQMAwhLyogeSvIuvh5W9PuqXaoVtdi0pNXQl8hou6QEbWUchRHw/exec';
+const endpoints:Record<Path,string>={hdb:LEAD_ENDPOINT,condo:LEAD_ENDPOINT,upgrade:LEAD_ENDPOINT};
 const money=new Intl.NumberFormat('en-SG',{style:'currency',currency:'SGD',maximumFractionDigits:0});
 const fmt=(n:number)=>money.format(Math.round(n||0));
 const absdOptions=[['SC buying first property',0],['SC buying second property',20],['PR buying first property',5],['PR buying second property',30]] as const;
