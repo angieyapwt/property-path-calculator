@@ -40,3 +40,6 @@ footer p{color:#555d73}footer a{color:#002366}
 .result-notes p{color:#cbd1ef;font-size:12px;line-height:1.55;margin:0}
 .result-notes p:first-child{display:flex;gap:9px;color:#fff;margin-bottom:8px}
 .result-notes svg{flex:none;margin-top:2px}
+.result-notes p,.result-notes p:first-child{display:flex;gap:9px;color:#fff;font-size:12px;line-height:1.55;margin:0 0 8px}
+.result-notes p:last-child{margin-bottom:0}
+.fee-toggle small{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.4;font-weight:400}
