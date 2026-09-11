@@ -30,3 +30,13 @@ footer p{color:#555d73}footer a{color:#002366}
 .fixed-rate span{grid-column:1/-1;font-size:13px;font-weight:700;color:#596078}
 .fixed-rate strong{display:block;border:1px solid #c9cde0;border-radius:9px;background:#f7f8fc;padding:11px 13px;color:var(--ink)}
 .fixed-rate small{font-size:11px;color:var(--muted);padding-bottom:11px}
+.commission-switch{width:48px;height:27px;flex:none;border:1px solid #aab0c8;border-radius:999px;background:#c8ccdc;padding:2px;cursor:pointer;transition:.2s}
+.commission-switch span{display:block;width:21px;height:21px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.25);transition:transform .2s}
+.commission-switch.on{background:#002366;border-color:#002366}
+.commission-switch.on span{transform:translateX(20px)}
+.commission-switch:focus-visible{outline:3px solid rgba(0,35,102,.22);outline-offset:2px}
+.fixed-rate{grid-template-columns:1fr}.fixed-rate strong{width:104px}
+.result-notes{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.17)}
+.result-notes p{color:#cbd1ef;font-size:12px;line-height:1.55;margin:0}
+.result-notes p:first-child{display:flex;gap:9px;color:#fff;margin-bottom:8px}
+.result-notes svg{flex:none;margin-top:2px}
