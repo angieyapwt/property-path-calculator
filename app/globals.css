@@ -14,3 +14,19 @@ footer{background:#001947;color:#fff;padding:46px clamp(22px,7vw,90px);display:g
 .modal-backdrop{position:fixed;inset:0;z-index:20;background:rgba(1,4,48,.75);backdrop-filter:blur(5px);display:grid;place-items:center;padding:20px}.modal{background:var(--paper);border-radius:20px;padding:34px;width:min(560px,100%);max-height:92vh;overflow:auto;position:relative;box-shadow:0 35px 90px rgba(0,0,0,.3)}.close{position:absolute;right:18px;top:18px;border:0;background:#eceef7;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;cursor:pointer}.modal h2{font-family:var(--font-serif);font-size:34px;margin:13px 40px 7px 0}.modal>p{color:var(--muted);line-height:1.5}.modal .field{margin-top:16px}.estimate-preview{display:flex;justify-content:space-between;gap:20px;background:var(--pale);border-radius:10px;padding:14px;margin:20px 0}.estimate-preview span{font-size:12px;color:#565d83}.estimate-preview strong{text-align:right;font-size:13px}.consent{display:flex;align-items:flex-start;gap:10px;font-size:12px;line-height:1.45;margin:18px 0}.consent input{margin-top:3px}.form-status{font-size:13px;color:#8a5228}.submit{width:100%;justify-content:center;border-radius:10px;background:var(--blue);color:#fff}.modal textarea{resize:vertical}
 @media(max-width:860px){.tab-content{grid-template-columns:1fr}.form-card{border-right:0}.sense-check{align-items:flex-start;flex-direction:column}.sense-check button{width:100%;justify-content:center}footer{grid-template-columns:1fr}.field-grid{grid-template-columns:1fr}.brand>span{display:none}.estimate-preview{flex-direction:column}.estimate-preview strong{text-align:left}}
 @media(max-width:520px){.path-tabs button{height:64px!important;display:flex!important;flex-direction:column!important;gap:2px!important;font-size:13px!important}.brandbar{height:74px}.brand img{width:150px;height:52px}.whatsapp{font-size:0}.whatsapp svg{width:22px;height:22px}.intro{padding-top:36px}.intro h1 br{display:none}.calculator-shell{padding-left:10px;padding-right:10px}.form-card,.result-card{padding:26px 20px}.sense-check{padding-top:64px;padding-bottom:64px}.modal{padding:28px 20px}.health-head{align-items:flex-start;flex-direction:column}}
+
+/* Estate Basics light-page refinements */
+.brandbar{padding-left:14px}
+.sense-check{max-width:none;padding-left:max(22px,calc((100vw - 980px)/2));padding-right:max(22px,calc((100vw - 980px)/2));background:#002366;color:#fff}
+.sense-check .eyebrow{color:#b8c5ff}.sense-check p{color:#e2e7ff}
+.disclaimer{max-width:none;margin:0;padding-left:max(22px,calc((100vw - 900px)/2));padding-right:max(22px,calc((100vw - 900px)/2));background:#f4f6fb;color:#555d73;border-top:0}
+footer{background:#fff;color:#202322;border-top:1px solid var(--line)}
+.footer-brand img{background:#fff}.footer-brand>span,footer>small{color:#69706c;border-color:var(--line)}
+footer p{color:#555d73}footer a{color:#002366}
+.fee-control{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.fee-control .fee-toggle{justify-content:flex-start;background:transparent;border:0;border-radius:0;padding:0;margin:0;gap:11px}
+.fee-control .fee-toggle strong{font-size:14px;color:var(--ink)}
+.fixed-rate{display:grid;grid-template-columns:1fr 104px;align-items:end;gap:7px 16px;max-width:300px;margin-top:15px}
+.fixed-rate span{grid-column:1/-1;font-size:13px;font-weight:700;color:#596078}
+.fixed-rate strong{display:block;border:1px solid #c9cde0;border-radius:9px;background:#f7f8fc;padding:11px 13px;color:var(--ink)}
+.fixed-rate small{font-size:11px;color:var(--muted);padding-bottom:11px}
