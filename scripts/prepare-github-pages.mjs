@@ -2,7 +2,24 @@ import { readFile, readdir, rename, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const root = join(process.cwd(), 'dist', 'client');
-await rename(join(root, '_next'), join(root, 'site-assets'));
+
+async function findAssetDirectory(directory) {
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const path = join(directory, entry.name);
+    if (entry.name === '_next') return path;
+    const nested = await findAssetDirectory(path);
+    if (nested) return nested;
+  }
+  return null;
+}
+
+const assetDirectory = await findAssetDirectory(root);
+if (!assetDirectory) {
+  throw new Error('The built _next asset directory was not found in dist/client.');
+}
+console.log(`Preparing GitHub Pages assets from ${assetDirectory}`);
+await rename(assetDirectory, join(root, 'site-assets'));
 
 const textExtensions = /\.(?:html|js|css|json|rsc|svg)$/i;
 
